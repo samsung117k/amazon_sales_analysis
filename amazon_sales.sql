@@ -4,7 +4,7 @@ FROM amazon_sales
 GROUP BY category
 ORDER BY average_discount_rate DESC;
 
--- Product with best ratings
+-- Top 10 best rated products
 SELECT product_name, rating, rating_count
 FROM amazon_sales
 WHERE rating != '|'
