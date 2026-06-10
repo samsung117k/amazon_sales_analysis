@@ -11,7 +11,7 @@ WHERE rating != '|'
 ORDER BY CAST(rating AS FLOAT) DESC, CAST(rating_count AS FLOAT) DESC
 LIMIT 10;
 
--- Real price vs discoutned price (category)
+-- Real price vs discounted price (category)
 SELECT category, ROUND(AVG(CAST(actual_price AS FLOAT)),2) AS actual_price, ROUND(AVG(CAST(discounted_price AS FLOAT)),2) AS discounted_price
 FROM amazon_sales
 GROUP BY category
